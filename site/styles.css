@@ -1,0 +1,379 @@
+body {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.title img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.title h1 {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 0.5em;
+    letter-spacing: 0.1em;
+}
+
+
+.search-bar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    height: 1.5em;
+    border: 1px solid;
+    box-shadow: 10px 12px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    width: 80%;
+    /* Adjust the width as needed */
+    max-width: 700px;
+    /* Maximum width */
+}
+/* Rectangle 1 */
+
+.search-bar i {
+    color: rgba(23, 147, 21, 0.8);
+    /* Change the icon color to green */
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.search-bar input {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3em;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    flex: 1;
+    outline: none;
+}
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: auto;
+    padding: 2em 2em 1em;
+    height: 65vh;
+    margin: auto;
+}
+
+.chart-container {
+    flex: 7;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.chart-container canvas {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-right: 20px; 
+}
+
+.chart-selector {
+    flex: 3;
+    padding: 0 0 20px 0;
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+
+.category-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}	
+
+.category-item {
+    background-color: #8a8484;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category-item.active  {
+    background-color: #559e24;
+    color: white;
+}
+
+.horizontal-layout {
+    display: flex;
+    padding: 40px 0;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60vh;
+    width: 90%;
+    max-width: 2500px;
+   
+}
+
+.vertical-layout {
+    display: flex;
+    padding: 40px 0;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60vh;
+    width: 90%;
+    max-width: 2500px;
+}
+
+.disclaimer-container {
+    text-align: center;
+    position:absolute;
+    bottom: 5;
+    left: 25%;
+    right: 25%;
+
+}
+
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: bold;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-product {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.header-name,
+.header-category,
+.header-price {
+    list-style: none;
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.no-results {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #888;
+}
+
+.search-results {
+    padding: 0;
+    list-style: none;
+    align-items: center;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.search-results li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.blurred {
+    filter: blur(10px);
+    transition: filter 0.3s;
+}
+
+.search-results li:hover {
+    background-color: rgba(23, 147, 21, 0.299);
+    transform: scale(1.01);
+}
+
+.search-results a.product-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-name,
+.product-category,
+.product-price {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.product-info img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+.price-up {
+    color: green;
+}
+
+.price-down {
+    color: red;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 40px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-left: 50px;
+}
+
+.product-title {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    margin: auto;
+}
+
+.product-title-content {
+    display: flex;
+    text-align: center;
+}
+
+.product-title-blank {
+    flex: 1;
+}
+
+.linked-icon {
+    color: black;
+}
+
+.product-title i {
+    padding: 0.2em 0;
+    font-size: 1.2em;
+}
+
+.product-title h2 {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    text-transform: uppercase;
+    margin: 5px 30px 0 30px; 
+    text-overflow: ellipsis;
+
+}
+
+.product-title h3 {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    letter-spacing: 0.1em;
+    margin: 0.3em 0;
+
+}
+
+.product-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
+    width: 90%;
+    max-height: 75vh;
+    margin: auto;
+}
+
+.product-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    max-width: 2500px;
+}
+
+.product-image {
+    position: relative;
+    text-align: center;
+}
+.product-image img {
+    width: 350px;
+    height: 350px;
+
+}
+
+.product-features li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #ccc;
+    transform: translate(-5%, 0);
+    width: 400px;
+    
+}
+
+.product-chart {
+    flex: 3;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.product-chart canvas {
+    width: 120%;
+    height: 100%;
+}
+
+#chart-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#chart-list li {
+    margin-bottom: 5px;
+    cursor: pointer;
+}

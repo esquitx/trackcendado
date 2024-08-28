@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trackcendado</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/favicon/favicon.ico"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- INCONSOLATA font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONTAWESOME LOGOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- chart-js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="index.html">
+          <img
+            src="assets/logo/logo.png"
+            alt="Trackcendado Logo"
+            class="logo"
+          />
+        </a>
+        <div class="search-bar-container">
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Busca un producto..."
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <div class="product-title">
+          <div class="product-title-content">
+            <a href="javascript:history.back()" class="linked-icon">
+              <i class="fa-solid fa-circle-arrow-left"></i>
+            </a>
+            <h2 id="product-name"></h2>
+            <h3 id="product-category"></h3>
+          </div>
+          <div class="product-title-blank"></div>
+        </div>
+        <div class="product-content">
+          <div class="product-container">
+            <div class="product-image">
+              <img id="product-image" alt="Product Image" />
+            </div>
+            <div class="product-features">
+              <ul>
+                <li>
+                  <span>FORMATO</span
+                  ><span class="product-data" id="product-format"></span>
+                </li>
+                <li>
+                  <span>PRECIO CANTIDAD</span
+                  ><span
+                    class="product-data"
+                    id="product-price-per-volume"
+                  ></span>
+                </li>
+                <li>
+                  <span>PRECIO</span
+                  ><span class="product-data" id="product-price"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-chart">
+            <canvas id="priceChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="javascript/product.js"></script>
+    <script src="javascript/search.js"></script>
+  </body>
+</html>
